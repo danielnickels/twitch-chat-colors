@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Twitch Color Thingy</title>
+  </head>
+  <body>
+
+
+    <div>
+      Login:
+      <div><button id="doLogin">Login</button></div>
+      Status: 
+      <div id="loginStatus">
+        Not logged in, yet. Click 'Login' Button.
+      </div>
+    </div>    
+
+    <div>
+      Chat:
+      <div>
+        <div>
+          <label for="channels">Channels to join: </label>
+          <input type="text" id="channels" size="50" placeholder="separated by space"/>
+        </div>
+        <button id="startChat">Connect</button>
+      </div>
+      Status:
+      <div id="chatStatus">
+        Not connected, yet. Click 'Connect' after login.
+      </div>
+
+    </div>
+    
+    <div>
+      Automatic random mode:
+      <div>
+        <label for="autoInterval">Interval: </label><input type="text" id="autoInterval" size="4" value="60" placeholder="seconds"/>
+      </div>
+      <div>
+        <button id="startAuto">Start</button>
+        <button id="stopAuto">Stop</button>
+      </div>
+      <div id="autoStatus"></div>
+    </div>
+
+    <div id="currentColor">This is the current color!</div>
+
+    <script type="application/javascript">
+      const config = {
+        client_id: '',
+        redirect_uri: 'http://localhost:3000'
+      }
+    </script>
+    <script src="dist/main.js"></script>
+  </body>
+</html>
